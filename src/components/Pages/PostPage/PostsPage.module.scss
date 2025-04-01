@@ -1,0 +1,61 @@
+// Блок контейнера
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+// Элемент заголовка
+.title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+// Модификатор ошибки
+.error {
+    color: #ff4444;
+    padding: 20px;
+    text-align: center;
+}
+
+.loading {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border: 3px solid rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        border-top-color: #4dabf7;
+        animation: spin 1s ease-in-out infinite;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// Добавление медиа-запросов для адаптивности
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; // Уменьшение отступов на меньших экранах
+    }
+
+    .title {
+        margin-bottom: 20px; // Уменьшение отступа для заголовка
+    }
+
+    .error, .loading {
+        font-size: 1rem; // Уменьшение размера шрифта для сообщений
+    }
+}

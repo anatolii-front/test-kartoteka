@@ -1,0 +1,59 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+  
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background: #e9ecef;
+      color: #495057;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      &:hover:not(:disabled) {
+        background: #4dabf7;
+        color: white;
+      }
+  
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+  
+      &.active {
+        background: #228be6;
+        color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  
+  // Адаптивность
+  @media (max-width: 768px) {
+    .pagination {
+      gap: 4px;
+      
+      button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  // Добавление стилей для кнопок "Назад" и "Вперед"
+  button[aria-label="Назад"],
+  button[aria-label="Вперед"] {
+    background: #e9ecef; // Общий фон для кнопок
+    &:hover:not(:disabled) {
+      background: #4dabf7; // Цвет при наведении
+    }
+  }

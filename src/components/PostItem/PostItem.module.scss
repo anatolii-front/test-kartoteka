@@ -1,0 +1,51 @@
+.post {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    &:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+      transform: translateY(-2px);
+    }
+  }
+  
+  .title {
+    color: #212529;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  
+  .body {
+    color: #495057;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  // Добавление медиа-запросов для адаптивности
+  @media (max-width: 768px) {
+    .post {
+        padding: 15px; // Уменьшение отступов на меньших экранах
+    }
+
+    .title {
+        font-size: 1.2rem; // Уменьшение размера шрифта для заголовка
+    }
+
+    .body {
+        font-size: 0.9rem; // Уменьшение размера шрифта для текста
+    }
+  }
